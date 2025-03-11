@@ -47,11 +47,16 @@ namespace MasterPolApplication.Pages
             {
 
                 var dir = Data.MasterPolBDEntities.GetContext().Directors;
-                //if (dir.Any(d => d.Login = LoginBox.Text d.Password = SchifreBox.Password){
+                if (dir.Any(d => d.Login == LoginBox.Text && d.Password == SchifreBox.Password))
+                {
+                    MessageBox.Show("Добро пожаловать!");
+                    Classes.manager.MainFrame.Navigate(new Pages.ViewPage());
+                }
+                else
+                {
+                    MessageBox.Show("Неверный логин или пароль", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
 
-                //}
-
-                Classes.manager.MainFrame.Navigate(new Pages.ViewPage());
             }
 
         }
