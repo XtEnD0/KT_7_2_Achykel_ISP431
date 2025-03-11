@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MasterPolApplication"
-        mc:Ignorable="d"
-        Title="Мастерпол" Height="650" Width="1000">
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Мастер пол" Height="650" Width="1000" MinHeight="650" MaxHeight="750" MinWidth="1000" MaxWidth="1100">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"></RowDefinition>
@@ -18,7 +18,7 @@
                    Margin="0,0,220,0" Height="65"/>
 </Grid>
 
-        <Frame x:Name="MainFrame" Grid.Row="1"></Frame>
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
 
     </Grid>
 </Window>

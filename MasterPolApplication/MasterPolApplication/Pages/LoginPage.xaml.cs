@@ -24,5 +24,36 @@ namespace MasterPolApplication.Pages
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder Err = new StringBuilder();
+
+            if (String.IsNullOrEmpty(LoginBox.Text))
+            {
+                Err.AppendLine("Введите Логин");
+
+            }
+            if (String.IsNullOrEmpty(SchifreBox.Password))
+            {
+                Err.AppendLine("Введите Пароль");
+            }
+
+            if (Err.Length > 0)
+            {
+                MessageBox.Show(Err.ToString(), "Внимание!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+
+                var dir = Data.MasterPolBDEntities.GetContext().Directors;
+                //if (dir.Any(d => d.Login = LoginBox.Text d.Password = SchifreBox.Password){
+
+                //}
+
+                Classes.manager.MainFrame.Navigate(new Pages.ViewPage());
+            }
+
+        }
     }
 }

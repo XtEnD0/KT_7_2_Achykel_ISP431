@@ -9,6 +9,53 @@
       Title="AddOrEditPage">
 
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Background="#F4E8D3" Grid.ColumnSpan="2">
+            <Button VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"
+                    Content="Назад" Width="80" Height="25" FontSize="15" x:Name="BackButton" Click="BackButton_Click"></Button>
+            <Button VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,20,0"
+                    Content="Сохранить" Width="80" Height="25" FontSize="15" x:Name="SaveButton" Click="SaveButton_Click"></Button>
+        </Grid>
+
+
+        <!--наименование, тип партнера (выпадающий список), рейтинг, адрес, ФИО директора, телефон и email компании.-->
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Наименование:"></Label>
+            <TextBox x:Name="PartnerNameTB" Width="150" Height="25"></TextBox>
+            <Label Content="Тип Партнера:"></Label>
+            <ComboBox x:Name="PartnerTypeCB" Width="150" Height="25" DisplayMemberPath="PartnerType"></ComboBox>
+            <Label Content="Рейтинг:"></Label>
+            <TextBox x:Name="RatingTB" Width="150" Height="25"></TextBox>
+            <Label Content="Директор:"></Label>
+            <TextBox x:Name="DirectorTB" Width="150" Height="25"></TextBox>
+            <Label Content="Номер телефона:"></Label>
+            <TextBox x:Name="PhoneTB" Width="150" Height="25"></TextBox>
+            <Label Content="Электронная почта:"></Label>
+            <TextBox x:Name="EmailTB" Width="150" Height="25"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Индекс:"></Label>
+            <TextBox x:Name="IndexTB" Width="150" Height="25"></TextBox>
+            <Label Content="Область:"></Label>
+            <TextBox x:Name="AreaTB" Width="150" Height="25"></TextBox>
+            <Label Content="Город:"></Label>
+            <TextBox x:Name="CityTB" Width="150" Height="25"></TextBox>
+            <Label Content="Улица:"></Label>
+            <TextBox x:Name="StreetNameTB" Width="150" Height="25"></TextBox>
+            <Label Content="Дом:"></Label>
+            <TextBox x:Name="HouseTB" Width="150" Height="25"></TextBox>
+        </StackPanel>
+
     </Grid>
 </Page>

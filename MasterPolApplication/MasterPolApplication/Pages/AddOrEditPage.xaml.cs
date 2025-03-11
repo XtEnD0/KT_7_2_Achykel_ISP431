@@ -23,6 +23,20 @@ namespace MasterPolApplication.Pages
         public AddOrEditPage()
         {
             InitializeComponent();
+            PartnerTypeCB.ItemsSource = Data.MasterPolBDEntities.GetContext().PartnerTypes.ToList();
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Classes.manager.MainFrame.CanGoBack)
+            {
+                Classes.manager.MainFrame.GoBack();
+            }
         }
     }
 }

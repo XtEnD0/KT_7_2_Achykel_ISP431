@@ -23,6 +23,30 @@ namespace MasterPolApplication.Pages
         public ViewPage()
         {
             InitializeComponent();
+            MainListView.ItemsSource = Data.MasterPolBDEntities.GetContext().Partners.ToList();
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Classes.manager.MainFrame.CanGoBack)
+            {
+                Classes.manager.MainFrame.GoBack();
+            }
+        }
+
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HistoryButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            Classes.manager.MainFrame.Navigate(new Pages.AddOrEditPage());
         }
     }
 }

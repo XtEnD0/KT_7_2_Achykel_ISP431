@@ -9,12 +9,19 @@
       Title="LoginPage">
 
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
-            <Label Content="Логин:"></Label>
-            <TextBox></TextBox>
-            <Label Content="Пароль:"></Label>
-            <PasswordBox></PasswordBox>
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" Height="200" Background="#F4E8D3">
+            <Grid.Effect>
+                <DropShadowEffect Color="#FFA2A2A2" BlurRadius="7"/>
+            </Grid.Effect>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
+            <Label Content="Логин:" HorizontalAlignment="Center" FontSize="15"></Label>
+            <TextBox x:Name="LoginBox" Height="25" FontSize="15" HorizontalContentAlignment="Center"></TextBox>
+            <Label Content="Пароль:" HorizontalAlignment="Center" FontSize="15"></Label>
+            <PasswordBox x:Name="SchifreBox" Height="25" FontSize="15" HorizontalContentAlignment="Center"></PasswordBox>
+                <Label Content=""></Label>
+                <Button Content="ВОЙТИ" Height="25" FontSize="15" x:Name="LoginButton" Click="LoginButton_Click"></Button>
         </StackPanel>
-        
+        </Grid>
+
     </Grid>
 </Page>

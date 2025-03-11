@@ -9,6 +9,52 @@
       Title="ViewPage">
 
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Background="#F4E8D3">
+            <Button VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"
+                    Content="Назад" Width="80" Height="25" FontSize="15" x:Name="BackButton" Click="BackButton_Click"></Button>
+            <Button VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,20,0"
+                    Content="Добавить" Width="80" Height="25" FontSize="15" x:Name="AddButton" Click="AddButton_Click"></Button>
+        </Grid>
+
+        <ListView HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="MainListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid Width="900">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="500"></ColumnDefinition>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition Width="250"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,0,5">
+                            <TextBlock Text="{Binding PartnerTypes.PartnerType, StringFormat={}{0} | }" FontWeight="DemiBold">
+                            <TextBlock Text="{Binding PartnerName, StringFormat={} {0}}" FontWeight="DemiBold"></TextBlock>
+                            </TextBlock>
+                            <TextBlock Text="{Binding Directors.Director, StringFormat={}{0}}"></TextBlock>
+                            <TextBlock Text="{Binding PartnerPhone, StringFormat={}{0}}"></TextBlock>
+                            <TextBlock Text="{Binding Rating, StringFormat={}Рейтинг: {0}}"></TextBlock>
+                        </StackPanel>
+
+                        <TextBlock Grid.Column="1" Text="10%"></TextBlock>
+
+                        <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="150">
+                            <Button x:Name="EditButton" Click="EditButton_Click" Content="Редактировать" Margin="0,5,0,20" Height="25" FontSize="15"></Button>
+                            <Button x:Name="HistoryButton" Click="HistoryButton_Click"  Content="История" Height="25" FontSize="15"></Button>
+                        </StackPanel>
+                       
+                        
+                    </Grid>
+                     
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         
     </Grid>
 </Page>
