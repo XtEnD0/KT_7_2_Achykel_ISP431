@@ -26,6 +26,7 @@ namespace MasterPolApplication
             Classes.manager.MainFrame = MainFrame;
             Classes.manager.MainFrame.Navigate(new Pages.LoginPage());
 
+
         }
     }
 }

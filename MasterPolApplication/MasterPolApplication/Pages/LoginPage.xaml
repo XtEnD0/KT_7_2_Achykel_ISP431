@@ -9,7 +9,7 @@
       Title="LoginPage">
 
     <Grid>
-        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" Height="200" Background="#F4E8D3">
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" Height="200" Background="#F4E8D3" x:Name="Gridson">
             <Grid.Effect>
                 <DropShadowEffect Color="#FFA2A2A2" BlurRadius="7"/>
             </Grid.Effect>
